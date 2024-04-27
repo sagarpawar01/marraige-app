@@ -16,17 +16,18 @@
 
 
 .uk-timeline .uk-timeline-item::before {
-  background: #dadee4;
+  background: #474747;
   content: "";
   height: 150px;
   left: 5%;
   position: absolute;
   top: 38px;
   width: 5px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 .uk-timeline .uk-timeline-item.active::before {
-  background: blue !important;
+  background: #ffffff;
+  z-index: 1;
 }
 .uk-timeline .uk-timeline-item:last-child::before {
   display: none;

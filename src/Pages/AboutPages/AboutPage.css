@@ -12,7 +12,17 @@
     @media (max-width: 768px) {
         padding: 10px;
     }
-} 
+}
+
+.about-us::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 232vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
 /* About Section Styles */
 .about-section {
@@ -54,17 +64,20 @@
     }
 }
 
-.container:hover {
+/* .container:hover {
     background-color: #e0e0e0;
+} */
+.our-story .container, .our-mission .container{
+    background-color: #2a2a2a;
+    color: #ffffff;
 }
-
 .our-story-content,
 .our-mission-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%; /* Ensure content takes full height */
-
+    background-color: #2a2a2a;
     /* Responsive settings */
     @media (max-width: 768px) {
         flex-direction: column; /* Stack content vertically on smaller screens */
@@ -109,7 +122,7 @@
 .our-story-text h2,
 .our-mission-text h2 {
     font-size: 2rem;
-    color: #1f3e72;
+    /* color: #1f3e72; */
     margin-bottom: 10px;
 
     /* Responsive settings */
@@ -127,7 +140,8 @@
     border-radius: 10px;
     border: 1px solid #1f3e72;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
     /* Responsive settings */
     @media (max-width: 768px) {
         padding: 20px;
@@ -138,8 +152,8 @@
 .testimonials-section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #1f3e72;
-    border-bottom: 2px solid #1f3e72; /* Adds underline */
+    /* color: #1f3e72; */
+    border-bottom: 2px solid #ffffff; /* Adds underline */
     padding-bottom: 5px;
     display: inline-block;
 
@@ -155,8 +169,8 @@
     padding: 20px;
     margin: 20px;
     background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #2a2a2a;
     /* Responsive settings */
     @media (max-width: 768px) {
         padding: 10px;
@@ -174,7 +188,7 @@
     transition: transform 0.3s ease-in-out;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+    background-color: rgba(0, 0, 0, 0.5);
     /* Responsive settings */
     @media (max-width: 768px) {
         padding: 10px;

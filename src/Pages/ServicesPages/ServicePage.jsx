@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import "../ServicesPages/ServicePage.css"
 import catering_image from '../ServicesPages/catering.jpeg'
@@ -8,8 +8,16 @@ import styling_image from '../ServicesPages/styling.jpeg'
 import dj_image from '../ServicesPages/dj.jpeg'
 import photography_image from '../ServicesPages/photography.jpeg'
 import hospitality_image from '../ServicesPages/hospitality.jpeg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ServicePage() {
+
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init();
+  }, []);
+
   const services = [
     {
       image: <img src={photography_image} alt="Wedding Planner" />,
@@ -54,7 +62,7 @@ function ServicePage() {
   ];
 
   return (
-    <Container>
+    <Container className="serviceContainer">
       <div className="ServicePage">
         <h1 className="page-title">Our Services</h1>
         <div className="services-container">
@@ -62,6 +70,7 @@ function ServicePage() {
             <div
               className={`service-item ${index % 2 === 0 ? "left" : "right"}`}
               key={index}
+              data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
             >
               <div className={`service-image image-service${index + 1}`}>
                 {service.image}

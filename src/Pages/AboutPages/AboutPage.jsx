@@ -3,10 +3,17 @@ import './AboutPage.css';
 // import corporate_image from "../AboutPages/corporate.jpeg"
 import corporate_image from "../AboutPages/corporate.jpeg"
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Import FontAwesome icons
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function AboutUs() {
     // State for the current testimonial index
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+    useEffect(() => {
+        // Initialize AOS
+        AOS.init();
+      }, []);
     
     // List of testimonials with images
     const testimonials = [
@@ -67,7 +74,7 @@ function AboutUs() {
                 <h1>About Us</h1>
             </section>
 
-            <section className="our-story">
+            <section className="our-story" data-aos="fade-down-left">
                 <div className="container">
                     <div className="our-story-content">
                         <div className="our-story-text">
@@ -81,7 +88,7 @@ function AboutUs() {
                 </div>
             </section>
 
-            <section className="our-mission">
+            <section className="our-mission" data-aos="fade-down-right">
                 <div className="container">
                     <div className="our-mission-content">
                         <img src={corporate_image} alt="Our Mission" className="our-mission-image" />
