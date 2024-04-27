@@ -18,9 +18,18 @@ import "./Value.css";
 // Demo styles, see 'Styles' section below for some notes on use.
 
 const Value = () => {
+
+  const [activeDiv, setActiveDiv] = useState(null);
+
+  const handleDivClick = (divNumber) => {
+    setActiveDiv(divNumber);
+  };
+
   return (
     <section id="value" className="v-wrapper">
+       <div className="headingText">Our Value</div>
       <div className="paddings innerWidth flexCenter v-container">
+
         {/* left side */}
         <div className="v-left">
           <div className="image-container">
@@ -30,7 +39,49 @@ const Value = () => {
 
         {/* right */}
         <div className="flexColStart v-right">
-          <span className="orangeText">Our Value</span>
+        <div class="uk-container uk-padding">
+    <div class="uk-timeline">
+        <div class={`uk-timeline-item ${activeDiv >= 1 ? 'active' : ''}`} onClick={() => handleDivClick(1)}>
+            <div class="uk-timeline-icon"></div>
+            <div class="uk-timeline-content">
+                <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <h3 class="uk-card-title"><time datetime="2020-07-08">Beat in the Market</time></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class={`uk-timeline-item ${activeDiv >= 2 ? 'active' : ''}`} onClick={() => handleDivClick(2)}>
+            <div class="uk-timeline-icon"></div>
+            <div class="uk-timeline-content">
+                <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <h3 class="uk-card-title"><time datetime="2020-07-07">Unbeatabe price</time></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+				<div class={`uk-timeline-item ${activeDiv >= 3 ? 'active' : ''}`} onClick={() => handleDivClick(3)}>
+            <div class="uk-timeline-icon"></div>
+            <div class="uk-timeline-content">
+                <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <h3 class="uk-card-title"><time datetime="2020-07-06">Extensive range of vendors</time></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+          {/* <span className="orangeText">Our Value</span>
 
           <span className="primaryText">Value We Give to You</span>
 
@@ -78,7 +129,7 @@ const Value = () => {
                 </AccordionItem>
               );
             })}
-          </Accordion>
+          </Accordion> */}
 
         </div>
       </div>

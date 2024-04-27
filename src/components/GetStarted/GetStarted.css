@@ -1,22 +1,24 @@
+.g-wrapper{
+    background-color: rgba(0, 0, 0, 0.8);
+}
 .inner-container{
     gap: 1.5rem;
-    background: hsl(45, 81%, 77%);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 2rem;
     border-radius: 10px;
-    border: 6px solid #f8e392;
+    /* border: 6px solid #f8e392; */
     text-align: center;
 }
 
 .inner-container .primaryText{
-    color: rgb(0, 0, 0);
+    color: #fff;
     font-weight: 600;
 }
 .inner-container .secondaryText{
-    color: rgba(0, 0, 0, 0.587);
+    color: rgba(221, 221, 221,0.5);
 }
 .inner-container .button {
-    background: #010101;
-    border: 2px solid rgb(0, 0, 0);
+    background: #f4dc95;
     box-shadow: rgb(95, 92, 92);
-    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.587);
 }

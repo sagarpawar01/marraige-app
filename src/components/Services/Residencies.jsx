@@ -11,14 +11,12 @@ const Residencies = () => {
     <div id="residencies" className="r-wrapper">
       <div className="paddings innerWidth r-container">
         <div className="flexColStart r-head">
-          <span className="orangeText">Best Choices</span>
-          <span className="primaryText">Popular Services</span>
+          {/* <span className="orangeText">Best Choices</span> */}
+          <span className="resHeadingText">Our Services</span>
         </div>
-        <Swiper {...sliderSettings}>
-          <SlideNextButton />
+        <div className="card-adjustment" >
           {/* slider */}
           {data.map((card, i) => (
-            <SwiperSlide key={i}>
               <div className="flexColStart r-card">
                 <img src={card.image} alt="home" />
 
@@ -26,14 +24,27 @@ const Residencies = () => {
                   <span style={{ color: "orange" }}></span>
                   <span>{card.price}</span>
                 </span>
-                <span className="primaryText">{card.name}</span>
+                <span className="resHeadingText">{card.name}</span>
                 <span className="secondaryText">{card.detail}</span>
               </div>
-            </SwiperSlide>
           ))}
-        </Swiper>
+          </div>
       </div>
+      <section className="c-wrapper">
+      <div className="flexColStart r-head">
+          {/* <span className="orangeText">Best Choices</span> */}
+          <span className="resHeadingText">Our Clients</span>
+        </div>
+      <div className="paddings innerWidth flexCenter c-container">
+        <img className='img' src="./punjabk.png" alt="" />
+        <img className='img' src="./hdfcc.png" alt="" />
+        <img className='img' src="./mercc.png" alt="" />
+        <img className='img' src="./ht.png" alt="" />
+        <img className='img' src="./delll.png" alt="" />
+      </div>
+    </section>
     </div>
+    
   );
 };
 

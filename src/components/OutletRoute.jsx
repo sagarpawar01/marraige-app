@@ -8,8 +8,8 @@ export default function OutletRoute() {
     <>
       <Header />
       <Outlet />     
-      <Foooter />
-      <Footer />
+      {/* <Foooter /> */}
+      {/* <Footer /> */}
     </>
   );
 }

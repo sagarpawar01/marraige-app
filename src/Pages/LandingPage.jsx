@@ -11,10 +11,11 @@ function LandingPage() {
   return (
     <div>
       <Hero />
-      <Companies />
+      
       <Residencies />
+      {/* <Companies /> */}
       <Value />
-      <Contact />
+      {/* <Contact /> */}
       <GetStarted />
       {/* <Testimonials /> */}
     </div>

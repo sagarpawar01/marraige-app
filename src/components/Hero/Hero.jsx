@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="hero-wrapper">
-      <div className="paddings innerWidth flexCenter hero-container">
+      <div className="paddings innerWidth hero-container">
         {/* left side */}
         <div className="flexColStart hero-left">
           <div className="hero-title">
@@ -35,7 +35,26 @@ const Hero = () => {
             <button className="button">Search</button>
           </div> */}
 
-          <div className="flexCenter stats">
+          
+        </div>
+
+        {/* right side */}
+        {/* <div className="flexCenter hero-right">
+          <motion.div 
+            initial={{ x: "7rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ 
+              duration: 2, 
+              type: "ease-in", 
+              y: -50 
+            }}
+            className="image-container"
+          >
+            <img src="./hero-image.png" alt="houses" />
+          </motion.div>
+        </div> */}
+      </div>
+      <div className="flexCenter stats">
             <div className="flexColCenter stat">
               <span>
                 <CountUp start={1450} end={1500} duration={4} /> <span>+</span>
@@ -57,24 +76,6 @@ const Hero = () => {
               <span className="secondaryText">Services We Offer</span>
             </div>
           </div>
-        </div>
-
-        {/* right side */}
-        <div className="flexCenter hero-right">
-          <motion.div 
-            initial={{ x: "7rem", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ 
-              duration: 2, 
-              type: "ease-in", 
-              y: -50 
-            }}
-            className="image-container"
-          >
-            <img src="./hero-image.png" alt="houses" />
-          </motion.div>
-        </div>
-      </div>
     </section>
   );
 };
